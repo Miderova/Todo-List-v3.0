@@ -119,12 +119,12 @@ class TodoApp {
 
             const todoItemText = this.dom.create("span", todo.text);
 
-            const removeBtn = this.dom.create("button", "Удалить", "remove-btn");
+            const removeBtn = this.dom.create("button", "🧟", "remove-btn");
             removeBtn.dataset.id = todo.id;
             removeBtn.disabled = !todo.completed;
 
-            todoItem.appendChild(removeBtn);
             todoItem.appendChild(todoItemText);
+            todoItem.appendChild(removeBtn);
             this.todoContainer.appendChild(todoItem);
         })
     }
